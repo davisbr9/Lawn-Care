@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Brendan's Lawn Care</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .container {
+      position: relative;
+      width: 100%;
+      max-width: 600px;
+      margin: 20px auto;
+      text-align: center;
+    }
+
+    .image {
+      opacity: 1;
+      display: block;
+      width: 100%;
+      height: auto;
+      transition: 0.5s ease;
+      backface-visibility: hidden;
+      border-radius: 10px;
+    }
+
+    .middle {
+      transition: 0.5s ease;
+      opacity: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .container:hover .image {
+      opacity: 0.3;
+    }
+
+    .container:hover .middle {
+      opacity: 1;
+    }
+
+    .text {
+      background-color: #4CAF50;
+      color: white;
+      font-size: 16px;
+      padding: 16px 32px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body class="contact">
+  <header>
+    <nav>
+      <a href="index.html">Home</a> |
+      <a href="contactpage.html">Contact Us</a> |
+      <a href="about.html">About</a> |
+      <a href="materialize.html">Materialize</a> |
+      <a href="jquery.html">Jquery</a> |
+      <a href="bootstrap.html">Bootstrap</a>
+    </nav>
+  </header>
+
+  <div class="main-content container">
+    <h1>About Brendan's Lawn Care</h1>
+    <p>At Brendan's Lawn Care, we take pride in keeping your lawn healthy, vibrant, and extra green. My team of experienced professionals ensures your grass stays lush and green all season long.</p>
+
+    <div class="container">
+      <img src="images/Me.jpg" alt="Brendan" class="image" />
+      <div class="middle">
+        <div class="text">Brendan</div>
+      </div>
+    </div>
+
+    <ul class="collapsible">
+      <li>
+        <div class="collapsible-header"><i class="material-icons">eco</i>Our Mission</div>
+        <div class="collapsible-body">
+          <span>Our mission is to provide the best lawn care services in the Denver area. We are committed to delivering quality results and exceptional customer service.</span>
+        </div>
+      </li>
+      <li>
+        <div class="collapsible-header"><i class="material-icons">groups</i>Our Team</div>
+        <div class="collapsible-body">
+          <span>Our team consists of dedicated professionals who are passionate about lawn care. We are experienced, knowledgeable, and always ready to go the extra mile for our customers.</span>
+        </div>
+      </li>
+      <li>
+        <div class="collapsible-header"><i class="material-icons">build</i>Our Services</div>
+        <div class="collapsible-body">
+          <span>We offer a wide range of lawn care services to meet your needs. From mowing and edging to aeration and seasonal cleanup, we have you covered. Our goal is to keep your lawn looking its best all year round.</span>
+        </div>
+      </li>
+    </ul>
+
+    <h2>Contact Us</h2>
+    <p>For inquiries and service requests, please call us at 1-800-LAWNCARE or email us at BRD@lawncareservices.com. We look forward to hearing from you!</p>
+  </div>
+
+  <footer>
+    <p><b>Brendan's Lawn Care</b></p>
+  </footer>
+
+  <!-- Materialize JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var elems = document.querySelectorAll('.collapsible');
+      M.Collapsible.init(elems);
+    });
+  </script>
+</body>
+</html>
