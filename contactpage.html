@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact Us - Brendan's Lawn Care</title>
+        <link rel="stylesheet" href="styles.css">
+        <script>
+            function changeImage() {
+                var image = document.getElementById("lawncareImage");
+                if (image.src.match("lawncare-icon.png")) {
+                    image.src = "images/lawn1.jpg"; // Good grass
+                } else {
+                    image.src = "images/badgrass.jpg"; // Bad Grass
+                }
+            }
+
+            function displayPhoneNumber() {
+                let phoneArray = ["1-800", "LAWNCARE"];
+                let phoneNumber = phoneArray.join("-");
+                document.getElementById("phone").textContent = "Call us at " + phoneNumber + " or email us at BRD@lawncareservices.com";
+            }
+        </script>
+    </head>
+    <body class="contact" onload="displayPhoneNumber()">
+        <div class="container">
+            <header>
+                <nav>
+                    <a href="index.html">Home</a> |  
+                    <a href="contactpage.html">Contact Us</a> |
+                    <a href="about.html">About</a> | 
+                    <a href="materialize.html">Materialize</a> |
+                    <a href="jquery.html">Jquery</a> |
+                    <a href="bootstrap.html">Bootstrap</a> 
+                </nav>
+            </header>
+            <div class="main-content">
+                <h1>Contact Us</h1>
+        
+                <p>Reach out to Brendan's Lawn Care for inquiries and service requests.</p>
+
+                <h2 id="phone"></h2>
+
+                <img id="lawncareImage" src="images/lawn1.jpg" alt="Lawn Care Icon" width="300" height="150">
+
+                <button type="button" onclick="changeImage()">Click to see life without lawncare</button>
+            </div>
+            <footer>
+                <p><b>Brendan's Lawn Care</b></p>
+            </footer>
+        </div>
+    </body>
+</html>

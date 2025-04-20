@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Brendan's Lawn Care</title>
+        <link rel="stylesheet" href="styles.css"> 
+        <script>
+            function revealText() {
+                var hiddenText = document.getElementById("hoverMessage");
+                hiddenText.style.display = "block"; 
+            }
+
+            function hideText() {
+                var hiddenText = document.getElementById("hoverMessage");
+                hiddenText.style.display = "none";
+            }
+        </script>
+    </head>
+    <body class="home"> 
+        <div class="container">
+            <header>
+                <nav>
+                    <a href="index.html">Home</a> |  
+                    <a href="contactpage.html">Contact Us</a> |
+                    <a href="about.html">About</a> | 
+                    <a href="materialize.html">Materialize</a> |
+                    <a href="jquery.html">Jquery</a> |
+                    <a href="bootstrap.html">Bootstrap</a>  
+
+                </nav>
+            </header>
+
+            <main class="main-content">
+                <section>
+                    <h1>Welcome to BRD Lawn Care (BRD is my initials)</h1>
+                    <h2>Professional Lawn Maintenance based in Denver, CO</h2>
+                </section>
+                <p>At Brendan's Lawn Care, we take pride in keeping your lawn healthy, vibrant, and extra green. My team of experienced professionals ensures your grass stays lush and green all season long.</p>
+
+                <hr>
+
+                <h3>Our Services Include:</h3>
+                <ul>
+                    <li><b>Mowing</b> - Regular lawn cutting for a neat appearance</li>
+                    <li><i>Edging</i> - Clean borders for driveways and walkways</li>
+                    <li><u>Aeration</u> - Improve soil health and root growth</li>
+                    <li>Seasonal Cleanup - Leaf removal and yard waste disposal</li>
+                </ul>
+
+                <hr>
+
+                <p>Learn more about the products we use.  
+                    <a href="https://www.deere.com/en/index.html" target="_blank">John Deere Site</a>.
+                </p>
+
+                <hr>
+
+                <h3>Service Pricing</h3>
+                <table>
+                    <tr>
+                        <th>Service</th>
+                        <th>Details</th>
+                        <th>Price</th>
+                    </tr>
+                    <tr>
+                        <td>Mowing</td>
+                        <td>Weekly lawn maintenance</td>
+                        <td>$30 per visit</td>
+                    </tr>
+                    <tr>
+                        <td>Edging</td>
+                        <td>Precision trimming along driveways</td>
+                        <td>$15 per visit</td>
+                    </tr>
+                    <tr>
+                        <td>Aeration</td>
+                        <td>Improve soil health</td>
+                        <td>$50 per session</td>
+                    </tr>
+                </table>
+
+                <!-- Hover text -->
+                <p id="hoverText" 
+                   onmouseover="revealText()" 
+                   onmouseout="hideText()">
+                   Hover over here for a surprise!
+                </p>
+
+                <p id="hoverMessage" style="display:none; color: green; font-weight: bold;">
+                    20% off if you find the hidden message!
+                </p>
+
+            </main>
+
+            <footer>
+                <p><b>Brendan's Lawn Care</b></p>
+            </footer>
+        </div>
+    </body>
+</html>

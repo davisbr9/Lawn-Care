@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Jquery</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+  <!-- Slide -->
+  <script>
+    $(document).ready(function () {
+      $("#flip").click(function () {
+        $("#panel").slideDown("slow");
+      });
+    });
+  </script>
+
+  <!-- Hide paragraphs-->
+  <script>
+    $(document).ready(function () {
+      $("#hideBtn").click(function () {
+        $(".number3 p").hide(1000);
+      });
+    });
+  </script>
+
+   <!-- Animate -->
+   <script>
+    $(document).ready(function(){
+      $("#button-animation").click(function(){
+        var box = $("#animated-box");
+        box.animate({height: '300px', opacity: '0.4'}, "slow");
+        box.animate({width: '300px', opacity: '0.8'}, "slow");
+        box.animate({height: '100px', opacity: '0.4'}, "slow");
+        box.animate({width: '100px', opacity: '0.8'}, "slow");
+      });
+    });
+  </script>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="index.html">Home</a> |  
+      <a href="contactpage.html">Contact Us</a> |
+      <a href="about.html">About</a> | 
+      <a href="materialize.html">Materialize</a> |
+      <a href="jquery.html">Jquery</a> |
+      <a href="bootstrap.html">Bootstrap</a>  
+    </nav>
+  </header>
+
+  <h1>Happy Customers, Happy Lawns</h1>
+  <h2>See what our clients are saying!</h2>
+
+  <!-- Section 1: Slide down -->
+  <section>
+    <style> 
+      #panel, #flip {
+        padding: 5px;
+        text-align: center;
+        background-color: lightskyblue;
+        border: solid 1px lightskyblue;
+      }
+      
+      #panel {
+        padding: 50px;
+        display: none;
+        margin-bottom: 80px
+  
+      }
+      
+      </style>
+      </head>
+      <body>
+       
+      <div id="flip">Click for a surprise</div>
+      <div id="panel">15% using code NICELAWN</div>
+  </section>
+
+  
+
+  <!-- Section 2: Hide paragraphs -->
+  <section class="number3" style="background-color: lightcoral; margin-bottom: 40px;">
+    <button id="hideBtn">Hide Testimonials</button>
+    <p>"Brendan's team transformed my backyard in a single weekend. Highly recommend!" - Sarah L.</p>
+    <p>"Professional, affordable, and fast. My lawn has never looked better!" - Mike T</p> 
+  </section>
+
+    <!-- Section 3: Animation -->
+    <section style="margin-bottom: 40px;">
+      <button id="button-animation">Start Animation</button>
+      <div id="animated-box" style="background:#98bf21;height:100px;width:100px;position:absolute;"></div>
+    </section>
+
+</body>
+</html>
